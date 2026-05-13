@@ -4,8 +4,8 @@ from pages.home import show_home_page
 from pages.classify import show_classification_page
 from pages.about import show_about_page
 from pages.model_info import show_model_info_page
-import gdown
 import os
+import requests
 
 # Set page configuration
 st.set_page_config(
@@ -16,8 +16,14 @@ st.set_page_config(
 )
 model_path = "ensemble_model.h5"
 if not os.path.exists(model_path):
-    with st.spinner("Downloading model... please wait"):
-        gdown.download("https://drive.google.com/uc?id=1klPO8ZwCk35TwPchgOi_2K57OnNU9nS0", model_path, quiet=False)
+    with st.spinner("⏳ Downloading model from HuggingFace... please wait (this may take a minute)"):
+        url = "https://huggingface.co/Chakradhar2226/tea-leaf-model/resolve/main/ensemble_model.h5"
+        response = requests.get(url, stream=True)
+        response.raise_for_status()
+        with open(model_path, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        st.success("✅ Model downloaded successfully!")
 def main():
     
     # Remove Streamlit's default sidebar and header
