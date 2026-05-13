@@ -1,0 +1,114 @@
+/* Main container styling */
+.main {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Fix for white background issue */
+.stApp {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+}
+
+/* Header styling */
+.main-header {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Card styling */
+.custom-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #2E8B57;
+    margin: 15px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Sidebar enhancements */
+.css-1d391kg, .css-1lcbmhc {
+    background: linear-gradient(180deg, #2E8B57 0%, #3CB371 100%);
+}
+
+/* Fix sidebar text colors */
+.css-1d391kg, .css-1lcbmhc {
+    color: white !important;
+}
+
+.css-1d391kg .stMarkdown, .css-1lcbmhc .stMarkdown {
+    color: white !important;
+}
+
+/* Button styling */
+.stButton button {
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.stButton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.4);
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+}
+
+/* Make text larger for better readability */
+/* Fix text colors */
+.stMarkdown {
+    color: #333333 !important;
+}
+
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+    color: #2E8B57 !important;
+}
+
+.stMarkdown p {
+    color: #333333 !important;
+}
+
+.stMarkdown p {
+    font-size: 16px !important;
+    line-height: 1.6;
+}
+
+/* Larger text in cards */
+.custom-card h2 {
+    font-size: 1.8rem !important;
+}
+
+.custom-card h3 {
+    font-size: 1.4rem !important;
+}
+
+.custom-card h4 {
+    font-size: 1.2rem !important;
+}
+
+.custom-card p {
+    font-size: 16px !important;
+}
+/* Hide Streamlit's automatic page navigation */
+[data-testid="stSidebarNav"] {
+    display: none !important;
+}
+
+.css-1lcbmhc .eczjsme0 {
+    display: none !important;
+}
